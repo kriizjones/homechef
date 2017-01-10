@@ -5,7 +5,7 @@ Given(/^the following dishes exists$/) do |table|
 end
 
 When(/^I am on the landing page$/) do
-  visit dishes_show_path
+  visit dishes_path
 end
 
 Then(/^I should see "([^"]*)"$/) do |content|
