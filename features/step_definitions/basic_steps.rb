@@ -7,7 +7,3 @@ end
 When(/^I am on the landing page$/) do
   visit dishes_path
 end
-
-Then(/^I should see "([^"]*)"$/) do |content|
-  expect(page).to have_content content
-end
