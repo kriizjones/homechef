@@ -7,5 +7,11 @@ Then(/^I should see input of type "([^"]*)" with name "([^"]*)"$/) do |type, nam
 end
 
 Then(/^I should see a placeholder for dishes in general with an id of "([^"]*)"$/) do |id|
-expect(page).to have_selector(:css, "div##{id}")
+  expect(page).to have_selector(:css, "div##{id}")
+end
+
+Then(/^I should see a link called "([^"]*)" that links to the main landing page$/) do |link|
+  expect(page).to have_link link
+  click_link link
+	%q{ When I visit the main landing page }
 end
