@@ -5,8 +5,8 @@ Feature: As a visitor,
 Background:
   Given the following dishes exists
     |    name   |                        description                              |  price  | readytime | portions |
-    | meatballs |    Homecooked with love, including mashed potatoes and sauce    |    49   |   18:00   |    10    |
-    |   taco    |    Really spicy authentic Mexican tacos                         |    59   |   16:00   |    10    |
+    | meatballs |    homecooked with love, including mashed potatoes and sauce    |    49   |   18:00   |    10    |
+    |   taco    |    really spicy authentic Mexican tacos                         |    59   |   16:00   |    10    |
 
 Scenario: Visitor is on main page and sees dishes
   When I am on the landing page
