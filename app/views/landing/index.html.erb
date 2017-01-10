@@ -2,7 +2,7 @@
 <%= link_to "Home", root_path %>
 <h1>Welcome to HomeChef</h1>
 <label>enter your location:</label>
-<input type="text" name="enter_location">
+<%= tag("input", type: 'text', name: "enter_location") %>
 <div id="random_dishes" style="width:300px;height:300px;border:1px dotted #ccc;padding:10px 10px 10px 10px;margin-top:40px;">
   <p>Random dish #1</p>
   <p>Random dish #2</p>
