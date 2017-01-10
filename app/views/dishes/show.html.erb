@@ -1,2 +1,11 @@
-<h1>Dishes#show</h1>
-<p>Find me in app/views/dishes/show.html.erb</p>
+<ul>
+    <% @dishes.each do |dish| %>
+      <li>
+      <%= dish.name.humanize %><br/>
+      <%= dish.description.humanize %>
+      Price: <%= dish.price %>kr
+      Ready for pick-up at <%= dish.readytime.strftime("%H:%M") %>
+      <%= dish.portions %> portions left
+    </li>
+   <% end %>
+</ul>
