@@ -6,7 +6,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to have_db_column :name }
     it { is_expected.to have_db_column :description }
     it { is_expected.to have_db_column :price }
-    it { is_expected.to have_db_column :readytime }
+    it { is_expected.to have_db_column :ready_time }
     it { is_expected.to have_db_column :portions }
   end
 
@@ -14,7 +14,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_presence_of :description }
     it { is_expected.to validate_presence_of :price }
-    it { is_expected.to validate_presence_of :readytime }
+    it { is_expected.to validate_presence_of :ready_time }
     it { is_expected.to validate_presence_of :portions }
   end
 

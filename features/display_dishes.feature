@@ -4,7 +4,7 @@ Feature: As a visitor,
 
 Background:
   Given the following dishes exists
-    |    name   |                        description                              |  price  | readytime | portions |
+    |    name   |                        description                              |  price  | ready_time | portions |
     | meatballs |    homecooked with love, including mashed potatoes and sauce    |    49   |   18:00   |    10    |
     |   taco    |    really spicy authentic mexican tacos                         |    59   |   16:00   |    10    |
 
