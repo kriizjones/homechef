@@ -5,11 +5,11 @@ Given(/^the following dishes exists$/) do |table|
 end
 
 When(/^I am on the "([^"]*)" page$/) do |page|
-  if page == "landing"
+  case page
+  when "landing"
     visit root_path
-  end
 
-  if page == "Meatballs"
+  when "Meatballs"
     id = Dish.find_by(name: "meatballs").id
     visit "/dishes/#{id}"
   end
