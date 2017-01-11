@@ -4,5 +4,4 @@ end
 
 When(/^I click the "([^"]*)" link$/) do |link|
   click_link link
-  %q{ I visit the main landing page }
 end
