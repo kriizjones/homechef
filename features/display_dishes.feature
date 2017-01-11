@@ -21,7 +21,7 @@ Scenario: Visitor is on main page and sees dishes
   And I should see "Ready for pick-up at 16:00"
   And I should see "10 portions left"
 
-Scenario: Visior visits URL for certain dish
+Scenario: Visitor visits URL for certain dish
   When I am on the "Meatballs" page
   Then I should see "Meatballs"
   And I should see "Homecooked with love, including mashed potatoes and sauce"
