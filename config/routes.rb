@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :dishes, only: [:index]
+  resources :dishes, only: [:index, :show]
 end
