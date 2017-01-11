@@ -1,0 +1,11 @@
+<ul>
+  <% @dishes.each do |dish| %>
+    <li>
+      <%= dish.name.humanize %><br/>
+      <%= dish.description.humanize %>
+      Price: <%= dish.price %>kr
+      Ready for pick-up at <%= dish.ready_time.strftime('%H:%M') %>
+      <%= dish.portions %> portions left
+    </li>
+  <% end %>
+</ul>

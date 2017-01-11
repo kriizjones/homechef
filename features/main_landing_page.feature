@@ -4,7 +4,7 @@ Feature: Main landing page
   I need to see a main landing page
 
   Scenario: Visitor visits main page
-    When I visit the main landing page
+    When I am on the "landing" page
     Then I should see "Welcome to HomeChef"
     And I should see input of type "text" with name "enter_location"
     And I should see a "general_random_dishes" placeholder
