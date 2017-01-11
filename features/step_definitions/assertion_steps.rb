@@ -14,9 +14,11 @@ Then(/^I should see a "([^"]*)" placeholder$/) do |id|
   expect(page).to have_selector(:css, "div##{id}")
 end
 
-Then(/^I should see a link called "([^"]*)" that links to the main landing page$/) do |link|
-  expect(page).to have_link link
-  click_link link
-	%q{ When I visit the main landing page }
+Then(/^I should see a link called "([^"]*)"$/) do |name|
+  expect(page).to have_link name
+end
+
+Then(/^I should go to the main landing page$/) do
+  %q{ When I visit the main landing page }
 end
 

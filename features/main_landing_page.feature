@@ -9,4 +9,6 @@ Feature: Main landing page
     And I should see input of type "text" with name "enter_location"
     And I should see a placeholder for dishes in general with an id of "random_dishes"
     And I should see a "logotype" placeholder
-    And I should see a link called "Home" that links to the main landing page
+    And I should see a link called "Home"
+    When I click the "Home" link
+    Then I should go to the main landing page
