@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
   def add_to_order
-    # binding.pry
     if Order.last
       order = Order.last
     else
