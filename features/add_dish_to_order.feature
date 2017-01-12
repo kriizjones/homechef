@@ -14,3 +14,9 @@ Feature: Add dish to order
     And I click the "Add dish" button for "taco"
     Then I should see "Successfully added to order"
     And "taco" should be added to the last order
+
+  Scenario: Successfully adds two dishes to order
+    When I am on the "landing" page
+    And I click the "Add dish" button for "taco"
+    And I click the "Add dish" button for "meatballs"
+    And there should be "2" items on the last order
