@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :encrypted_password, presence: true
   validates :reset_password_token, presence: true
+  validates :reset_password_sent_at, presence: true
+
 end
