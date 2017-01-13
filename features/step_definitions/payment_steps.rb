@@ -29,6 +29,6 @@ And(/^Show me an image of the page$/) do
 end
 
 Then(/^I should see "([^"]*)" on the order confirmation$/) do |content|
-  sleep(4)
+  sleep(2)
   expect(page).to have_content content
 end

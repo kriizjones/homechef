@@ -1,3 +1,5 @@
+@javascript @stripe
+
 Feature:
   As a buying User,
   In order to secure the pickup of my order
@@ -14,7 +16,6 @@ Background:
     And I click the "Add dish" button for "taco"
     And there should be "1" items on the last order
     And I am on the "Checkout" page
-    And Show me an image of the page
     And I click the stripe button
     And I fill in my card details on the stripe form
     And I submit the stripe form
