@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'acts_as_shopping_cart', '~> 0.4.1'
 
 group :development, :test do
   gem 'pry'
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'coveralls', require: false
+  gem 'launchy'
 end
 
 group :development do
