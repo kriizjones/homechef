@@ -13,3 +13,7 @@ end
 Then(/^I should be on the main landing page$/) do
   visit root_path
 end
+
+Then(/^I click on the "([^"]*)" link$/) do |link|
+  click_link link
+end
