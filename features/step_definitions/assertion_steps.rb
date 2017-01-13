@@ -15,7 +15,6 @@ Then(/^I should be on the main landing page$/) do
 end
 
 And(/^"([^"]*)" should be added to the last order$/) do |dish_name|
-	# dish = Dish.find_by(name: dish_name)
 	order = Order.last
 	expect(order.shopping_cart_items.last.item.name).to eq dish_name
 end
