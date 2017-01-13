@@ -3,6 +3,7 @@ class ChargesController < ApplicationController
   end
 
   def create
+    @dishes = Order.last.shopping_cart_items
     @total_amount = Order.last.total
     @amount = @total_amount.to_i*100
 
