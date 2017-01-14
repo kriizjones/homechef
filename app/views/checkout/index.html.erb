@@ -6,7 +6,7 @@
       Price: $<%= dish.price %>
       <%= form_tag add_to_order_path, id: "dish-#{dish.id}" do %>
           <%= hidden_field_tag :dish_id, dish.id %>
-          <%= submit_tag "Add dish" %>
+          <%= submit_tag "Remove" %>
       <% end %>
     </li>
   <% end %>
