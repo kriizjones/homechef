@@ -19,6 +19,17 @@ Background:
     And I click the stripe button
     And I fill in my card details on the stripe form
     And I submit the stripe form
-    Then I should see "Thanks, you paid $10.00! Your order: 1 Taco will be ready for pick-up at 16:00" on the order confirmation
+    Then I should see "Thanks, you paid $10.00! Your order: 1 Taco will be ready for pick-up at 16:00" on the order confirmation page
 
   Scenario: User purchases two dishes with different pick_up time and is being shown pick_up time for both dishes
+    When I am on the "landing" page
+    And I click the "Add dish" button for "taco"
+    And I click the "Add dish" button for "meatballs"
+    And I click the "Add dish" button for "meatballs"
+    And there should be "2" items on the last order
+    And I am on the "Checkout" page
+    And I click the stripe button
+    And I fill in my card details on the stripe form
+    And I submit the stripe form
+    Then I should see "Thanks, you paid $10.00! Your order: 1 Taco will be ready for pick-up at 16:00" on the order confirmation page
+    And I should see "2 meatballs will be ready for pick-up at 16:00" on the order confirmation page

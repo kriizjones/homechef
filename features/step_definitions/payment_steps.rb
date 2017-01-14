@@ -28,7 +28,7 @@ And(/^Show me an image of the page$/) do
   Capybara::Screenshot.screenshot_and_open_image
 end
 
-Then(/^I should see "([^"]*)" on the order confirmation$/) do |content|
+Then(/^I should see "([^"]*)" on the order confirmation page$/) do |content|
   sleep(2)
   expect(page).to have_content content
 end
