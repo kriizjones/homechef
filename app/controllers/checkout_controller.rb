@@ -4,7 +4,7 @@ class CheckoutController < ApplicationController
     @total_amount = Order.last.total
   end
 
-  def destroy
+  def delete
     order = Order.last
     dish = Dish.find(params[:dish_id])
     order.remove(dish)

@@ -27,4 +27,4 @@ Scenario: Visitor is on main page and has an order
   And I should see "Ready for pick-up at 18:00"
   And I should see the stripe button
   When I click the "Remove" button for "taco"
-  Then "taco" should be removed from my order
+  Then I should see "Removed dish from order"

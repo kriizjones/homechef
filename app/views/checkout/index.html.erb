@@ -4,7 +4,7 @@
       <%= dish.quantity %> <%= dish.item.name.humanize %> <%= dish.item.description.humanize %>
       Ready for pick-up at <%= dish.item.ready_time.strftime('%H:%M') %><br>
       Price: $<%= dish.price %>
-      <%= form_tag add_to_order_path, id: "dish-#{dish.id}" do %>
+      <%= form_tag remove_from_order_path, id: "dish-#{dish.id}" do %>
           <%= hidden_field_tag :dish_id, dish.id %>
           <%= submit_tag "Remove" %>
       <% end %>

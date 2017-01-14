@@ -15,7 +15,3 @@ end
 Then(/^I should see the stripe button$/) do
   find('.stripe-button-el')
 end
-
-Then(/^"([^"]*)" should be removed from my order$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
