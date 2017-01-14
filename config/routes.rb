@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'checkout/index'
+
   root controller: :landing, action: :index
   resources :dishes, only: [:index, :show]
   get :checkout, controller: :landing, action: :checkout
