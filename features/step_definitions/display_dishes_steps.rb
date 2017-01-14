@@ -14,6 +14,6 @@ When(/^I am on the "([^"]*)" page$/) do |page|
     visit "/dishes/#{id}"
 
   when 'Checkout'
-    visit checkout_path
+    visit checkout_index_path
   end
 end
