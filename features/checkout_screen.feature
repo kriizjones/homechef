@@ -16,7 +16,6 @@ Feature: As a buying User,
     And I click the "Add dish" button for "meatballs"
     And there should be "2" items on the last order
     And I click "Checkout" button
-    Then I am on the "Checkout" page
     Then I should see "Taco"
     And I should see "Really spicy authentic mexican tacos"
     And I should see "Price: $59"
@@ -28,6 +27,7 @@ Feature: As a buying User,
     And I should see the stripe button
     When I click the "Remove" button for "taco"
     Then I should see "Removed dish from order"
+    And I should not see "Taco"
 
   Scenario: Visitor tries to access checkout page without items in the order
     When I am on the "landing" page

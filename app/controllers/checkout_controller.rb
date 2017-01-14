@@ -4,7 +4,7 @@ class CheckoutController < ApplicationController
       redirect_to root_path
       flash[:notice] = "You have no items in your order"
     else
-      @dishes = Order.last.shopping_cart_items.all
+      @order_items = Order.last.shopping_cart_items.all
       @total_amount = Order.last.total
     end
   end
