@@ -7,7 +7,7 @@ Then(/^I should not see "([^"]*)"$/) do |content|
 end
 
 Then(/^I should see input of type "([^"]*)" with name "([^"]*)"$/) do |type, name|
-  expect(page).to have_css('input[type='"#{type}"'][name*='"#{name}"']')
+  expect(page).to have_css('input[type=' "#{type}" '][name*=' "#{name}" ']')
 end
 
 Then(/^I should see a "([^"]*)" placeholder$/) do |id|
@@ -19,8 +19,8 @@ Then(/^I should be on the main landing page$/) do
 end
 
 Then(/^"([^"]*)" should be added to the last order$/) do |dish_name|
-	order = Order.last
-	expect(order.shopping_cart_items.last.item.name).to eq dish_name
+  order = Order.last
+  expect(order.shopping_cart_items.last.item.name).to eq dish_name
 end
 
 Then(/^there should be "([^"]*)" items on the last order$/) do |count|
@@ -30,4 +30,8 @@ end
 
 Then(/^I should see the stripe button$/) do
   expect(page).to have_css '.stripe-button-el'
+end
+
+Then(/^I should see "([^"]*)" on the order confirmation page$/) do |content|
+  expect(page).to have_content content
 end

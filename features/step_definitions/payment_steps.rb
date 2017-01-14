@@ -26,7 +26,3 @@ And(/^Show me an image of the page$/) do
   sleep(0.1) until page.evaluate_script('$.active') == 0
   Capybara::Screenshot.screenshot_and_open_image
 end
-
-Then(/^I should see "([^"]*)" on the order confirmation page$/) do |content|
-  expect(page).to have_content content
-end

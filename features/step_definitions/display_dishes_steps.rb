@@ -6,14 +6,14 @@ end
 
 When(/^I am on the "([^"]*)" page$/) do |page|
   case page
-  when 'landing'
-    visit root_path
+    when 'landing'
+      visit root_path
 
-  when 'Meatballs'
-    id = Dish.find_by(name: 'meatballs').id
-    visit "/dishes/#{id}"
+    when 'Meatballs'
+      id = Dish.find_by(name: 'meatballs').id
+      visit "/dishes/#{id}"
 
-  when 'Checkout'
-    visit checkout_index_path
+    when 'Checkout'
+      visit checkout_index_path
   end
 end
