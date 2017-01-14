@@ -1,1 +1,8 @@
-<h2>Thanks, you paid <strong>$<%= "%.2f" % @total_amount %></strong>!</h2>
+<h2>Thanks, you paid <strong>$<%= "%.2f" % @total_amount %></strong>!<br>
+  Your order:<br>
+
+  <% @dishes.each do |dish| %>
+      <%= dish.quantity %> <%= dish.item.name.humanize %> will be ready for pick-up
+      at <%= dish.item.ready_time.strftime('%H:%M') %><br>
+  <% end %>
+</h2>
