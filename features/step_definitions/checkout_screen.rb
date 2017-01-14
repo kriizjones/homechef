@@ -13,5 +13,5 @@ When(/^I click "([^"]*)" button$/) do |button|
 end
 
 Then(/^I should see the stripe button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  find('.stripe-button-el')
 end

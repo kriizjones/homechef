@@ -1,6 +1,12 @@
-<% @dishes.each do |dish| %>
-  <%= dish.quantity %> <%= dish.item.name.humanize %> will be ready for pick-up
-  at <%= dish.item.ready_time.strftime('%H:%M') %><br>
-<% end %>
+<ul>
+  <% @dishes.each do |dish| %>
+    <li>
+      <%= dish.quantity %> <%= dish.item.name.humanize %> <%= dish.item.description.humanize %>
+      Ready for pick-up at <%= dish.item.ready_time.strftime('%H:%M') %><br>
+      Price: $<%= dish.price %>
+    </li>
+  <% end %>
+</ul>
+
 
 <%= render file:'/charges/new' %>
