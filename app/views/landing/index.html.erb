@@ -4,6 +4,6 @@
 <label>enter your location:</label>
 <%= tag("input", type: 'text', name: "enter_location") %>
 <div id="general_random_dishes" style="width:300px;height:300px;border:1px dotted #ccc;padding:10px 10px 10px 10px;margin-top:40px;">
-  <%= render file:'/dishes/index' %>
+  <%= render file: '/dishes/index' %>
 </div>
-  <%= link_to "Checkout", checkout_index_path %>
+<%= link_to "Checkout", checkout_index_path %>

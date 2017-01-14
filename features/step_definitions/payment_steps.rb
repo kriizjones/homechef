@@ -13,9 +13,9 @@ When(/^I fill in my card details on the stripe form$/) do
 end
 
 When(/^I submit the stripe form$/) do
-    within_frame @stripe_iframe do
-      page.execute_script('$("button").click()')
-    end
+  within_frame @stripe_iframe do
+    page.execute_script('$("button").click()')
+  end
 end
 
 Then(/^my order should be registered in the system$/) do

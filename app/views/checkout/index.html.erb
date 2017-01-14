@@ -1,14 +1,14 @@
 <ul>
   <% @order_items.each do |order_item| %>
-    <li>
-      <%= order_item.quantity %> <%= order_item.item.name.humanize %> <%= order_item.item.description.humanize %>
-      Ready for pick-up at <%= order_item.item.ready_time.strftime('%H:%M') %><br>
-      Price: $<%= order_item.price %>
-      <%= form_tag remove_from_order_path, id: "dish-#{order_item.item.id}" do %>
-        <%= hidden_field_tag :dish_id, order_item.item.id %>
-        <%= submit_tag 'Remove' %>
-      <% end %>
-    </li>
+      <li>
+        <%= order_item.quantity %> <%= order_item.item.name.humanize %> <%= order_item.item.description.humanize %>
+        Ready for pick-up at <%= order_item.item.ready_time.strftime('%H:%M') %><br>
+        Price: $<%= order_item.price %>
+        <%= form_tag remove_from_order_path, id: "dish-#{order_item.item.id}" do %>
+            <%= hidden_field_tag :dish_id, order_item.item.id %>
+            <%= submit_tag 'Remove' %>
+        <% end %>
+      </li>
   <% end %>
 </ul>
 
