@@ -17,11 +17,9 @@ Feature: As a buying User,
     And there should be "2" items on the last order
     And I click "Checkout" button
     Then I should see "Taco"
-    And I should see "Really spicy authentic mexican tacos"
     And I should see "Price: $59"
     And I should see "Ready for pick-up at 16:00"
-    Then I should see "Meatballs"
-    And I should see "Homecooked with love, including mashed potatoes and sauce"
+    And I should see "Meatballs"
     And I should see "Price: $49"
     And I should see "Ready for pick-up at 18:00"
     And I should see the stripe button
