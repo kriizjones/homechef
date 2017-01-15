@@ -13,9 +13,9 @@ When(/^I fill in my card details on the stripe form$/) do
 end
 
 When(/^I submit the stripe form$/) do
-    within_frame @stripe_iframe do
-      page.execute_script('$("button").click()')
-    end
+  within_frame @stripe_iframe do
+    page.execute_script('$("button").click()')
+  end
 end
 
 Then(/^my order should be registered in the system$/) do
@@ -25,8 +25,4 @@ end
 And(/^Show me an image of the page$/) do
   sleep(0.1) until page.evaluate_script('$.active') == 0
   Capybara::Screenshot.screenshot_and_open_image
-end
-
-Then(/^I should see "([^"]*)" on the order confirmation page$/) do |content|
-  expect(page).to have_content content
 end
