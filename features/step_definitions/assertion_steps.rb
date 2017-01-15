@@ -17,3 +17,7 @@ end
 Then(/^I should be on the signup page$/) do
   expect(current_path).to eq new_user_registration_path
 end
+
+Then(/^a user with "([^"]*)" and "([^"]*)" should have been created$/) do |signup_email, sign_up_password|
+  pending
+end

@@ -11,3 +11,4 @@ Feature: Sign Up
     And I enter my password in the "Password" field
     And I enter my password in the "Password confirmation" field
     And I click the "Sign up" button
+    Then a user with "email" and "password" should have been created
