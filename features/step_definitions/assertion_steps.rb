@@ -14,10 +14,6 @@ Then(/^I should be on the main landing page$/) do
   visit root_path
 end
 
-Then(/^I click on the "([^"]*)" link$/) do |link|
-  click_link link
-end
-
-Then(/^I should be on the signup page$/) do |page|
+Then(/^I should be on the signup page$/) do
   expect(current_path).to eq new_user_registration_path
 end
