@@ -6,4 +6,4 @@ Feature: Sign Up
   Scenario: Successfully Signed Up
     When I am on the "landing" page
     And I click on the "Sign up" link
-    Then I should be on the "Sign up" page
+    Then I should be on the signup page

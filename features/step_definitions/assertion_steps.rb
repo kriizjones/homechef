@@ -17,3 +17,7 @@ end
 Then(/^I click on the "([^"]*)" link$/) do |link|
   click_link link
 end
+
+Then(/^I should be on the signup page$/) do |page|
+  expect(current_path).to eq new_user_registration_path
+end
