@@ -27,4 +27,10 @@ RSpec.describe User, type: :model do
       it { is_expected.to validate_presence_of :current_sign_in_ip }
       it { is_expected.to validate_presence_of :last_sign_in_ip }
     end
+
+    describe "Factory" do
+      it 'should have a valid factory' do
+        expect(FactoryGirl.create(:user)).to be_valid
+      end
+    end
 end
