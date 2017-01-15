@@ -8,3 +8,4 @@ Feature: Sign Up
     And I click the "Sign up" link
     Then I should be on the signup page
     When I enter my email in the "email" field
+    And I enter my password in the "password" field
