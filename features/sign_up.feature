@@ -7,3 +7,4 @@ Feature: Sign Up
     When I am on the "landing" page
     And I click the "Sign up" link
     Then I should be on the signup page
+    When I enter my email in the "email" field
