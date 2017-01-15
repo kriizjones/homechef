@@ -10,4 +10,4 @@ Feature: Main landing page
     And I should see a "general_random_dishes" placeholder
     And I should see a "logotype" placeholder
     When I click the "Home" link
-    Then I should be on the main landing page
+    Then I should be on the "landing" page

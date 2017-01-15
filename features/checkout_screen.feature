@@ -33,3 +33,17 @@ Feature: As a buying User,
     When I am on the "landing" page
     And I click "Checkout" button
     Then I should see "You have no items in your order"
+
+  Scenario: Visitor removes all items from his basket should be redirected to landing page
+    When I am on the "landing" page
+    And I click the "Add dish" button for "meatballs"
+    And there should be "1" items on the last order
+    And I click "Checkout" button
+    Then I should see "Meatballs"
+    And I should see "Homecooked with love, including mashed potatoes and sauce"
+    And I should see "Price: $49"
+    And I should see "Ready for pick-up at 18:00"
+    And I should see the stripe button
+    When I click the "Remove" button for "meatballs"
+    Then I should be on the "landing" page
+    Then I should see "You have no items in your order"

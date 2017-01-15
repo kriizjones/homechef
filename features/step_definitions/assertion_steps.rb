@@ -14,7 +14,7 @@ Then(/^I should see a "([^"]*)" placeholder$/) do |id|
   expect(page).to have_selector(:css, "div##{id}")
 end
 
-Then(/^I should be on the main landing page$/) do
+Then(/^I should be on the "landing page$/) do
   expect(page.current_path).to eq root_path
 end
 
@@ -34,4 +34,10 @@ end
 
 Then(/^I should see "([^"]*)" on the order confirmation page$/) do |content|
   expect(page).to have_content content
+end
+
+Then(/^I should be on the "([^"]*)" page$/) do |current_page|
+  if current_page == "landing"
+    expect(page.current_path).to eq root_path
+  end
 end
