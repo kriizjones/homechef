@@ -11,4 +11,6 @@ Feature: Sign Up
     And I enter my password in the "Password" field
     And I enter my password in the "Password confirmation" field
     And I click the "Sign up" button
-    Then a user with "email" and "password" should have been created
+    Then I should be on the main landing page
+    And I should see "User created successfully"
+#    And a user with "email" and "password" should be added
