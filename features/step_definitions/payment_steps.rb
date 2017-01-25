@@ -25,10 +25,8 @@ end
 
 Given(/^I check out but my card is declined$/) do
   StripeMock.prepare_card_error(:card_declined)
-  steps %q{
-    And I should be on the "Checkout" page
-    And I click the stripe button
-    And I fill in my card details on the stripe form
-    And I submit the stripe form
-  }
+  steps %q(
+  And I fill in my card details on the stripe form
+  And I submit the stripe form
+  )
 end
