@@ -14,6 +14,7 @@ Then(/^I should see a "([^"]*)" placeholder$/) do |id|
   expect(page).to have_selector(:css, "div##{id}")
 end
 
+
 Then(/^I should be on the "landing page$/) do
   expect(page.current_path).to eq root_path
 end
@@ -41,3 +42,16 @@ Then(/^I should be on the "([^"]*)" page$/) do |current_page|
     expect(page.current_path).to eq root_path
   end
 end
+
+Then(/^I should be on the main landing page$/) do
+  visit root_path
+end
+
+Then(/^I should be on the signup page$/) do
+  expect(current_path).to eq new_user_registration_path
+end
+
+# And(/^a user with "([^"]*)" and "([^"]*)" should be added$/) do |sign_up_email, sign_up_password|
+#   Factory.create(:user, sign_up_email, sign_up_password)
+# end
+

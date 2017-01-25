@@ -19,7 +19,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'stripe'
 gem 'bootstrap-sass', '~> 3.3.6'
+
 gem 'acts_as_shopping_cart', '~> 0.4.1'
+
+gem 'devise'
+
 
 group :development, :test do
   gem 'pry'
