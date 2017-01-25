@@ -1,10 +1,8 @@
 # Homechef
-Midcourse project for the Nov -16 cohort from Craft Academy Bootcamp. 
-A project that will develop into a website where users can buy homecooked food from amateur homechefs. 
+Midcourse project for the Nov -16 cohort from Craft Academy Bootcamp. A project that will develop into a website where users can buy homecooked food from amateur homechefs.
 
 ### Build
 [![Build Status](https://travis-ci.org/CraftAcademy/homechef.svg?branch=develop)](https://travis-ci.org/CraftAcademy/homechef)
-
 ### Coverage
 [![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/homechef/badge.svg?branch=develop)](https://coveralls.io/github/CraftAcademy/homechef?branch=develop)
 
@@ -20,7 +18,7 @@ To be able to install and run the application you will need to install Rails 5 a
 
 A step by step series of examples that tell you have to get a development env running
 
-Fork and clone repo.
+Fork and clone repo, then:
 
 ```
 $ bundle install
@@ -31,33 +29,18 @@ And then
 ```
 $ rake db:migrate db:seed
 ```
+
 ## Running the tests
 
-To run tests
+to run tests
 
 ```
-$ rake 
-```
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+$rake
 ```
 
 ## Deployment
 
-We are using Travis for continous integration and Heroku for deployment.
+We are using Travis for continous integration and Heroku for deployment
 
 ## Built With
 
