@@ -32,10 +32,10 @@ $ rake db:migrate db:seed
 
 ## Running the tests
 
-to run tests
+To run tests
 
 ```
-$rake
+$ rake
 ```
 
 ## Deployment
@@ -47,6 +47,9 @@ We are using Travis for continous integration and Heroku for deployment
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Travis](https://travis-ci.org) - Used for continous integration
+* [Coveralls](https://coveralls.io) - To track code coverage
+* [Heroku](http://heroku.com/) - For deployment
 
 ## Contributing
 
@@ -68,6 +71,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* https://github.com/crowdint/acts_as_shopping_cart
