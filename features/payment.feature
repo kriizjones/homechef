@@ -24,3 +24,11 @@ Feature: As a Buying User,
     And I fill in my card details on the stripe form
     And I submit the stripe form
     Then I should see "Thanks, you paid $20.00!" on the order confirmation page
+
+  Scenario: Redirects to carts page on error
+    Given I am on the "Checkout" page
+    And show me the page
+    And I click the stripe button
+    And I check out but my card is declined
+    Then I am on the "Checkout" page
+    Then I should see "Your card was declined, please try again"
