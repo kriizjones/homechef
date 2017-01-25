@@ -6,11 +6,11 @@ Feature: Sign Up
   Scenario: Successfully Signed Up
     When I am on the "landing" page
     And I click the "Sign up" link
-    Then I should be on the signup page
+    Then I should be on the "Sign up" page
     When I enter my email in the "Email" field
     And I enter my password in the "Password" field
     And I enter my password in the "Password confirmation" field
     And I click the "Sign up" button
-    Then I should be on the main landing page
+    Then I should be on the "landing" page
     And I should see "User created successfully"
 #    And a user with "email" and "password" should be added
