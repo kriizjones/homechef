@@ -1,8 +1,8 @@
 # Homechef
-Midcourse project for the Nov -16 cohort from Craft Academy Bootcamp. A project that will develop into a website where users can buy homecooked food from amateur homechefs.
+roject for the Nov -16 cohort from Craft Academy Bootcamp. A project that will develop into a website where users can buy homecooked food from amateur homechefs.
 
-### Build
 [![Build Status](https://travis-ci.org/CraftAcademy/homechef.svg?branch=develop)](https://travis-ci.org/CraftAcademy/homechef)
+
 ### Coverage
 [![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/homechef/badge.svg?branch=develop)](https://coveralls.io/github/CraftAcademy/homechef?branch=develop)
 
@@ -12,27 +12,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To be able to install and run the application you will need to install Rails 5 and PostgreSQL.
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
 
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
 
+
 Fork and clone repo, then:
+```
+Give the example
+```
+
+And repeat
 
 ```
-$ bundle install
-```
-
-And then
-
-```
-$ rake db:migrate db:seed
+until finished
 ```
 
 ## Running the tests
 
-To run tests
+End with an example of getting some data out of the system or using it for a little demo
 
 ```
 $ rake
