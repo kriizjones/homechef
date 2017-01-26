@@ -1,11 +1,10 @@
-Feature: Login to buy and sell an dish
-  As an owner
-  I need to log in
-  So I can sell or buy dishes
+Feature: Login
+  As a user
+  In order to buy and sell food
+  I need to log in with my account
 
   Background:
     Given that there is a user with email: "kristoffer.user@homechef.com"
-
 
   Scenario: A user logs in
     When I am on the "landing" page
