@@ -1,11 +1,7 @@
-When(/^I enter my email in the "([^"]*)" field$/) do |field_name|
-	fill_in "Email", with: :email
-end
-
-And(/^I enter my password in the "([^"]*)" field$/) do |field_name|
-	fill_in "Password", with: :password
+When(/^I fill in "([^"]*)" in the "([^"]*)" field$/) do |value, field|
+  fill_in field, with: value
 end
 
 And(/^I click the "([^"]*)" button$/) do |button|
-	click_button button
+  click_button button
 end
