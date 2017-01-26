@@ -40,16 +40,23 @@ $ rake
 
 ## Deployment
 
-We are using Travis for continous integration and Heroku for deployment
+We are using [Travis](https://travis-ci.org) for continous integration and Heroku](http://heroku.com/) for deployment.
+
+For deployment, change the information in the `.travis.yml` file. For API-key;
+
+```
+$ travis encrypt $(heroku auth:token) —add deploy.api_key
+```
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 * [Travis](https://travis-ci.org) - Used for continous integration
 * [Coveralls](https://coveralls.io) - To track code coverage
 * [Heroku](http://heroku.com/) - For deployment
+* [Ruby on Rails](http://rubyonrails.org) — Web Framework
+* [Devise](https://github.com/plataformatec/devise) — Authentication library
+* [Twitter Bootstrap](http://getbootstrap.com) — Front-end framework
+* [Stripe](https://github.com/stripe/stripe-ruby) - Payment solution
 
 ## Contributing
 
