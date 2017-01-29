@@ -25,6 +25,7 @@ class ChargesController < ApplicationController
     if charge.paid
       @order.update(finalized: true)
       session.delete :order_id
+      drop_portions
     end
 
   rescue Stripe::CardError => e
@@ -33,6 +34,14 @@ class ChargesController < ApplicationController
   end
 
   private
+
+  def drop_portions
+    @order.shopping_cart_items.each do |dish_item|
+      dish = Dish.find(dish_item.item.id)
+      dish.update(portions: dish.portions - dish_item.quantity)
+    end
+  end
+
   def stripe_token(params)
     Rails.env.test? ? generate_test_token : params[:stripeToken]
   end
