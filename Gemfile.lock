@@ -122,6 +122,10 @@ GEM
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
     ffi (1.9.17)
+    geokit (1.10.0)
+    geokit-rails (2.2.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     gherkin (4.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -187,6 +191,9 @@ GEM
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack_session_access (0.1.1)
+      builder (>= 2.0.0)
+      rack (>= 1.0.0)
     rails (5.0.1)
       actioncable (= 5.0.1)
       actionmailer (= 5.0.1)
@@ -319,6 +326,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_girl_rails
+  geokit-rails
   jbuilder (~> 2.5)
   jquery-rails
   launchy
@@ -329,6 +337,7 @@ DEPENDENCIES
   pry
   pry-byebug
   puma (~> 3.0)
+  rack_session_access
   rails (~> 5.0.1)
   rspec-rails
   sass-rails (~> 5.0)
