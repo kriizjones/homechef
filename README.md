@@ -1,9 +1,6 @@
 # Homechef
 Midcourse project for the Nov -16 cohort from Craft Academy Bootcamp. A project that will develop into a website where users can buy homecooked food from amateur homechefs.
 
-### Pivotal Tracker
-[![Pivotal](https://www.pivotaltracker.com/n/projects/)]
-
 ### Build
 [![Build Status](https://travis-ci.org/CraftAcademy/homechef.svg?branch=develop)](https://travis-ci.org/CraftAcademy/homechef)
 ### Coverage
@@ -61,18 +58,18 @@ $ travis encrypt $(heroku auth:token) —add deploy.api_key
 * [Twitter Bootstrap](http://getbootstrap.com) — Front-end framework
 * [Stripe](https://github.com/stripe/stripe-ruby) - Payment solution
 
-## Contributing
-
-
-## Versioning
-
-
 ## Authors
-
+* **Craft Academy** - [CraftAcademy](https://github.com/CraftAcademy)
+* **Ebba Aniansson** - [aniansson](https://github.com/aniansson)
+* **Kristoffer Karlsson** - [kriizjones](https://github.com/kriizjones)
+* **Philip Zudemberg** - [Philippoes](https://github.com/Philippoes)
+* **Rodrigo Muños** - [rmzse](https://github.com/rmzse)
 
 ## License
 
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
 * https://github.com/crowdint/acts_as_shopping_cart
+* https://github.com/geokit/geokit-rails
