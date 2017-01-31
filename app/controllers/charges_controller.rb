@@ -1,10 +1,13 @@
 class ChargesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
   end
 
   def create
-    @dishes = Order.last.shopping_cart_items.all
-    @total_amount = Order.last.total
+    @order = Order.find(session[:order_id])
+    @items = @order.shopping_cart_items
+    @total_amount = @order.total
     @amount = @total_amount.to_i*100
 
     customer = Stripe::Customer.create(
@@ -19,12 +22,26 @@ class ChargesController < ApplicationController
         currency: 'usd'
     )
 
+    if charge.paid
+      @order.update(finalized: true)
+      session.delete :order_id
+      drop_portions
+    end
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to new_charge_path
+    redirect_to checkout_index_path
   end
 
   private
+
+  def drop_portions
+    @order.shopping_cart_items.each do |dish_item|
+      dish = Dish.find(dish_item.item.id)
+      dish.update(portions: dish.portions - dish_item.quantity)
+    end
+  end
+
   def stripe_token(params)
     Rails.env.test? ? generate_test_token : params[:stripeToken]
   end
