@@ -10,8 +10,8 @@ Feature: As a User
       Then I fill in "email@random.com" in the "Email" field
       And I fill in "Valentine" in the "First name" field
       And I fill in "Karlsson" in the "Last name" field
-      And I fill in "hamngatan 27" in the "Street address" field
-      And I fill in "311 74" in the "ZIP code" field
+      And I fill in "hamngatan 27" in the "Address" field
+      And I fill in "311 74" in the "Zip code" field
       And I fill in "Falkenberg" in the "City" field
-      And I fill in "0770223344" in the "Telephone number" field
+      And I fill in "0770223344" in the "Phone" field
       When I click "Update" button
