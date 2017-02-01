@@ -15,3 +15,4 @@ Feature: As a User
       And I fill in "Falkenberg" in the "City" field
       And I fill in "0770223344" in the "Phone" field
       When I click "Update" button
+      Then "email@random.com" should have name "Valentine"
