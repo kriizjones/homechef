@@ -8,12 +8,21 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def update
-    current_user.update_attributes(sanitized_params)
+    super
   end
 
   private
 
-  def sanitized_params
-    params.required(:user).permit(:first_name, :last_name, :address, :zip_code, :city, :phone)
+  def account_update_params
+    params.required(:user).permit(:first_name,
+                                  :last_name,
+                                  :address,
+                                  :zip_code,
+                                  :city,
+                                  :phone,
+                                  :email,
+                                  :password,
+                                  :password_confirmation,
+                                  :current_password)
   end
 end

@@ -7,14 +7,25 @@ Feature: As a User
 
     Scenario: I edit my profile
       When I am on the "Edit profile" page
-      Then I fill in "email@random.com" in the "Email" field
-      And I fill in "Valentine" in the "First name" field
-      And I fill in "Karlsson" in the "Last name" field
-      And I fill in "hamngatan 27" in the "Address" field
-      And I fill in "311 74" in the "Zip code" field
-      And I fill in "Falkenberg" in the "City" field
-      And I fill in "0770223344" in the "Phone" field
+      Then I fill in "Email" with "email@random.com"
+      And I fill in "First name" with "Valentine"
+      And I fill in "Last name" with "Karlsson"
+      And I fill in "Address" with "Hamngatan 27"
+      And I fill in "Zip code" with "311 74"
+      And I fill in "City" with "Falkenberg"
+      And I fill in "Phone" with "0770223344"
       When I click "Update" button
+      Then I should see "Account successfully updated"
       Then "email@random.com" should have name "Valentine"
 
-      
+  Scenario: Updating with an empty email field
+    When I am on the "Edit profile" page
+    Then I fill in "Email" with ""
+    And I fill in "First name" with "Valentine"
+    And I fill in "Last name" with "Karlsson"
+    And I fill in "Address" with "Hamngatan 27"
+    And I fill in "Zip code" with "311 74"
+    And I fill in "City" with "Falkenberg"
+    And I fill in "Phone" with "0770223344"
+    When I click "Update" button
+    And I should see "Please add email address"
