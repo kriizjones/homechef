@@ -35,4 +35,4 @@ Feature: As a User
     And I fill in "Password confirmation" with "password"
     And I fill in "Current password" with "password"
     When I click "Update" button
-    And I should see "Please add email address"
+    And I should see "can't be blank"
