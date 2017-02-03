@@ -15,10 +15,12 @@
 <% if alert %>
     <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6">
-      <%= yield %>
+<div class="row">
+  <div class="col">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1" style="padding: 0px 25px 0px 25px; border: 1px solid black">
+        <%= yield %>
+      </div>
     </div>
   </div>
 </div>
