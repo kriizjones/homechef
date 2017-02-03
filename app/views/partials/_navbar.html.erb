@@ -22,7 +22,9 @@
         <ul class="nav navbar-nav navbar-right">
         <li>
           <p class="navbar-btn">
-            <%= button_to "Checkout", checkout_index_path, id: "checkout_button", class: "btn btn-danger pull-right", method: :get %>
+            <%= button_to checkout_index_path, method: :get, class: "btn btn-danger pull-right" do %>
+                <span class="glyphicon glyphicon-shopping-cart"></span> Checkout
+            <% end %>
           </p>
         </li>
         </ul>

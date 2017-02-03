@@ -50,9 +50,9 @@
           <td>  </td>
           <td>  </td>
           <td>
-            <button type="button" class="btn btn-default">
-              <span class="glyphicon glyphicon-cutlery"></span> Continue Shopping
-            </button>
+            <%= button_to root_path, method: :get, class: "btn btn-default" do %>
+                <span class="glyphicon glyphicon-cutlery"></span> Continue shopping
+            <% end %>
           </td>
           <td>
             <%= render file: '/charges/new' %>
