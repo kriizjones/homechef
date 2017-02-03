@@ -7,10 +7,6 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
-  def update
-    super
-  end
-
   private
 
   def account_update_params
