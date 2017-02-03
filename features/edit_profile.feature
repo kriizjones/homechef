@@ -4,7 +4,7 @@ Feature: As a User
 
   Background:
     Given that there is a user logged in with an email of "email@random.com"
-    And that there is a session with data lng and lat
+    And that there is a session with lat and lng near "Chalmers"
 
     Scenario: I edit my profile
       When I am on the "Edit profile" page
