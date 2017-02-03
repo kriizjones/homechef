@@ -2,6 +2,6 @@
 <label>Search by address:</label>
 <%= form_tag(search_by_address_path) do %>
     <%= text_field_tag 'address' %>
-    <%= submit_tag 'Search' %>
+    <%= submit_tag 'Search', class: 'btn btn-danger' %>
 <% end %>
 <%= render partial: '/dishes/index' %>
