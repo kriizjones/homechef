@@ -6,7 +6,7 @@
     font-size: 14px;
     background-color: rgba(235, 120, 120, 1);
     border-width: 0px;
-    border-radius: 50px;
+    border-radius: 0px;
 }
 
 #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
