@@ -1,0 +1,32 @@
+<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header"><a class="navbar-brand" href="#"><span class="glyphicon glyphicon-cutlery"></span> Homechefs</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menubuilder">
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "Home", root_path %>
+        <li><a href="/about-us">About Us</a>
+        </li>
+        <li><a href="/contact">Contact Us</a>
+        </li>
+        <% if user_signed_in? %>
+            <li><%= link_to 'Edit profile', edit_user_registration_path %>
+            </li>
+        <% else %>
+            <li><%= link_to "Sign up", new_user_registration_path %>
+            </li>
+            <li><%= link_to "Login", new_user_session_path %>
+            </li>
+        <% end %>
+        <li>
+          <p class="navbar-btn">
+            <%= button_to "Checkout", checkout_index_path, id: "checkout_button", class: "btn btn-danger", method: :get%>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
