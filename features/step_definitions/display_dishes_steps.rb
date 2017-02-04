@@ -15,5 +15,8 @@ When(/^I (?:am on|go to) the "([^"]*)" page$/) do |page|
 
     when 'Checkout'
       visit checkout_index_path
+
+    when 'Edit profile'
+      visit edit_user_registration_path
   end
 end
