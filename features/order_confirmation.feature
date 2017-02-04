@@ -15,7 +15,8 @@ Feature:
     And I am on the "landing" page
 
   Scenario: User purchases a dish and is being shown pick_up time and order summary at a confirmation page
-    When I click the "Add dish" button for "taco"
+    When I click the plus button for "taco"
+    And I click the "Add dish to order" button
     And there should be "1" items on the last order
     And I go to the "Checkout" page
     And I click the stripe button
@@ -24,9 +25,12 @@ Feature:
     Then I should see "Thanks, you paid $10.00! Your order: 1 Taco will be ready for pick-up at 16:00" on the order confirmation page
 
   Scenario: User purchases two dishes with different pick_up time and is being shown pick_up time for both dishes
-    When I click the "Add dish" button for "taco"
-    And I click the "Add dish" button for "meatballs"
-    And I click the "Add dish" button for "meatballs"
+    When I click the plus button for "taco"
+    And I click the "Add dish to order" button
+    And I click the plus button for "meatballs"
+    And I click the "Add dish to order" button
+    And I click the plus button for "meatballs"
+    And I click the "Add dish to order" button
     And there should be "2" items on the last order
     And I go to the "Checkout" page
     And I click the stripe button
