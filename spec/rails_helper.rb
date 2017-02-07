@@ -8,11 +8,16 @@ require "rack_session_access/capybara"
 
 ActiveRecord::Migration.maintain_test_schema!
 
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+  config.include Shoulda::Matchers::ActiveRecord, type: :model
+  config.include FactoryGirl::Syntax::Methods
+  config.include ResponseJSON, type: :request
 end
 
 Shoulda::Matchers.configure do |config|
@@ -21,3 +26,5 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+
