@@ -1,26 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::CheckoutController, type: :request do
+  let(:user) { FactoryGirl.create(:user) }
+  let (:dish) { FactoryGirl.create(:dish) }
+  let(:credentials) { user.create_new_auth_token }
+  let(:headers) { {HTTP_ACCEPT: 'application/json'}.merge!(credentials) }
   describe 'GET /v1/checkout' do
-    describe 'the checkout screen ' do
-      # it 'should not show any dishes if no dishes have been added to order' do
-      #
-      # end
 
+    it 'should display all the dishes in this order that have not yet payed yet' do
+      @order = Order.create(user: user)
+      @order.add(dish, dish.price)
 
-      it 'or display all the dishes in this order that have not yet payed yet' do
-        user = FactoryGirl.create(:user)
-        dish = FactoryGirl.create(:dish)
-        @order = Order.create(user: user, finalized: false)
-        @order.add(dish, dish.price)
-
-        get '/api/v1/checkout'
-        @order_items = OrderItems.all
-        render json: {entries: @order_items}
-        expect(response.status).to eq 200
-        expect(response_json['entries'].last.item['name']).to eq "Pizza"
-
-      end
+      get '/api/v1/checkout', headers: headers
+      binding.pry
+      expect(response_json['entries']).to eq "Pizza"
+      expect(response.status).to eq 200
     end
   end
 end
