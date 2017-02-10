@@ -12,8 +12,7 @@ RSpec.describe Api::V1::CheckoutController, type: :request do
       @order.add(dish, dish.price)
 
       get '/api/v1/checkout', headers: headers
-      binding.pry
-      expect(response_json['entries']).to eq "Pizza"
+      expect(response_json['order_items']).to eq [{"name"=>"Pizza", "price"=>1.0, "quantity"=>1, "ready_time"=>"10 Jan 16:32"}]
       expect(response.status).to eq 200
     end
   end

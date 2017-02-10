@@ -7,6 +7,8 @@ class Api::V1::CheckoutController < ApiController
     if @order == nil || @order.shopping_cart_items.count == 0
       render json: { message: "Something went wrong" }, status: :error
     else
+      @order_items = @order.shopping_cart_items
+      @total_amount = @order.total.to_f
       render 'show'
     end
   end
