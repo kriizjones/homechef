@@ -17,8 +17,9 @@ RSpec.describe Api::V1::CheckoutController, type: :request do
         get '/api/v1/checkout'
         @order_items = OrderItems.all
         render json: {entries: @order_items}
-        expect(response_json['entries'].last.item['name']).to eq "Pizza"
         expect(response.status).to eq 200
+        expect(response_json['entries'].last.item['name']).to eq "Pizza"
+
       end
     end
   end
